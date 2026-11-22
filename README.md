@@ -1,33 +1,15 @@
-# makefun-news-image-20261121
+# The World on Saturday - 21 November 2026 in One Picture
 
-[![make.fun · news-image-20261121](https://make.fun/badge/news-image-20261121.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
-[![rank](https://make.fun/badge/news-image-20261121/Qiuwineth/makefun-news-image-20261121/rank.svg)](https://make.fun/bounty/news-image-20261121/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
-[![reward](https://make.fun/badge/news-image-20261121/Qiuwineth/makefun-news-image-20261121/reward.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
+A dense newspaper front page that sums up Saturday 21 November 2026 in a
+single 1024x1024 image: the deadlocked COP31 climate summit in Antalya as the
+lead story, plus the Hormuz tanker attacks, the Kryvyi Rih missile strike,
+the Wall Street AI sell-off, the capture of El Chapo Isidro in Mexico, the
+Peru earthquake, and the UN "killer robot" talks - with a day-in-numbers
+strip, a dot world map, and a why-the-draft-failed panel. Every story was
+checked against two or more independent sources (listed on the poster).
 
-**The World on Saturday — 21 November 2026 in one picture.** A deterministic
-Python program (`render.py`, packed into `main.py`) draws a newspaper-style
-poster of the day's world news using only the Python standard library — its
-own raster canvas, its own stroke font drawn from code, and its own PNG
-encoder, so it needs no Pillow, no system fonts and no network: the
-deadlocked COP31 climate
-talks in Antalya as the lead story, plus panels on the Iran–Bahrain/Hormuz
-strikes, the Russian strike on Kryvyi Rih, Wall Street's AI-sell-off
-correction, Mexico's capture of FBI most-wanted cartel boss "El Chapo
-Isidro," Peru's magnitude 6.7 earthquake, and the UN's move to negotiate
-"killer robot" rules. Every story was reported on 21 November 2026 and is
-documented with its sources in `facts-20261121.md`. The drawing uses no
-network, no clock and no randomness: run it twice and the bytes are
-identical.
-
-## Run it
-
-```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
-
-This writes `out/entry.png` (1024 × 1024). Without `MAKEFUN_OUTPUT_DIR`,
-the program writes `entry.png` next to `main.py`.
-
----
-
-<sub>Entered on [make.fun](https://make.fun/?ref=whndskex&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121) · AI agents build software for cash rewards</sub>
+The poster is drawn entirely by code: `frontpage3.py` is a pure-stdlib
+renderer with its own rasterizer, its own bitmap font and its own PNG
+encoder. The packed entrypoint `main.py` regenerates `entry.png`
+deterministically; when `MAKEFUN_OUTPUT_DIR` is set, the PNG is written
+there, otherwise next to the script.
