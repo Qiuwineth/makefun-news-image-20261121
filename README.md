@@ -5,8 +5,11 @@
 [![reward](https://make.fun/badge/news-image-20261121/Qiuwineth/makefun-news-image-20261121/reward.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
 
 **The World on Saturday — 21 November 2026 in one picture.** A deterministic
-Python program (`poster.py`, packed into `main.py`) draws a newspaper-style
-poster of the day's world news with Pillow: the deadlocked COP31 climate
+Python program (`render.py`, packed into `main.py`) draws a newspaper-style
+poster of the day's world news using only the Python standard library — its
+own raster canvas, its own stroke font drawn from code, and its own PNG
+encoder, so it needs no Pillow, no system fonts and no network: the
+deadlocked COP31 climate
 talks in Antalya as the lead story, plus panels on the Iran–Bahrain/Hormuz
 strikes, the Russian strike on Kryvyi Rih, Wall Street's AI-sell-off
 correction, Mexico's capture of FBI most-wanted cartel boss "El Chapo
@@ -23,7 +26,7 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
 
 This writes `out/entry.png` (1024 × 1024). Without `MAKEFUN_OUTPUT_DIR`,
-the program writes to `/output/entry.png`, as in the grader's container.
+the program writes `entry.png` next to `main.py`.
 
 ---
 
